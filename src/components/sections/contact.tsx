@@ -1,6 +1,5 @@
-import React from "react";
-import Container from "../ui/container";
-import SectionTitle from "../ui/section-title";
+import Container from "@/components/ui/container";
+import SectionTitle from "@/components/ui/section-title";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {

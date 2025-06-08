@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Database } from "lucide-react";
-import { NavLink } from "../ui/nav-link";
+import { NavLink } from "@/components/ui/nav-link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

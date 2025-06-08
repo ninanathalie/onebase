@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Container from "../ui/container";
-import SectionTitle from "../ui/section-title";
+import Container from "@/components/ui/container";
+import SectionTitle from "@/components/ui/section-title";
 import { CheckCircle, X } from "lucide-react";
 
 interface PlanFeature {

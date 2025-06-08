@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "../ui/container";
-import SectionTitle from "../ui/section-title";
+import Container from "@/components/ui/container";
+import SectionTitle from "@/components/ui/section-title";
 import { Users, BarChart, Zap, Shield, Clock, Headphones } from "lucide-react";
 
 interface FeatureProps {
