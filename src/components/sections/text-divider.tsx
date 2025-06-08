@@ -2,7 +2,7 @@ import Marquee from "@/components/animations/marquee";
 
 const ScrollingTextDivider = () => {
   return (
-    <section className="relative -mx-4 flex flex-col w-full overflow-hidden py-28 lg:py-44">
+    <div className="relative -mx-4 flex flex-col w-full overflow-hidden py-16 lg:py-20 2xl:py-24 mb-4">
       <Marquee reverse pauseOnHover className="[--duration:25s]">
         <div className="flex gap-4">
           <TextFilled>Simplify Your Process</TextFilled>
@@ -23,7 +23,7 @@ const ScrollingTextDivider = () => {
           <TextStroke>Simplify Your Process</TextStroke>
         </div>
       </Marquee>
-    </section>
+    </div>
   );
 };
 

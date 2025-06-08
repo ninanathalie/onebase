@@ -23,32 +23,32 @@ const Header = () => {
       <div className={`container mx-auto transition-all duration-300 ${isScrolled ? "max-w-5xl bg-white border-2 border-slate-50 py-3 px-6 rounded-full" : "px-4 md:px-6"}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img src={Logo} alt="1base-logo" />
+            <img src={Logo} alt="1base-logo" className={`transition-all duration-300 ease-in-out ${isScrolled ? "w-[145px] h-[30px]" : "w-[151px] h-[36px]"}`} />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <NavLink href="#features">Features</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#pricing">Pricing</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
             <NavLink href="#contact">Contact</NavLink>
-            <Button variant="primary">
+            <Button href="#consultation" variant="primary">
               Book a Consultation
             </Button>
           </nav>
 
           {/* Mobile menu button */}
-          <button className="md:hidden text-slate-700 focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="lg:hidden text-slate-700 focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`md:hidden bg-white ${isMenuOpen ? "max-h-screen py-4 shadow-md" : "max-h-0 py-0"}  mt-2 rounded-xl overflow-hidden transition-all duration-300`}>
+      <div className={`lg:hidden bg-white ${isMenuOpen ? "max-h-screen py-4 shadow-md" : "max-h-0 py-0"}  mt-2 rounded-xl overflow-hidden transition-all duration-300`}>
         <div className="container mx-auto px-4">
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 text-center">
             <NavLink href="#features" mobile onClick={() => setIsMenuOpen(false)}>
               Features
             </NavLink>
@@ -64,7 +64,7 @@ const Header = () => {
             <NavLink href="#contact" mobile onClick={() => setIsMenuOpen(false)}>
               Contact
             </NavLink>
-            <Button variant="primary">
+            <Button href="#consultation" variant="primary">
               Book a Consultation
             </Button>
           </div>

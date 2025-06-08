@@ -28,10 +28,10 @@ const Pricing = () => {
   ];
 
   return (
-    <Container id="pricing" className="mb-24 lg:mb-40 max-w-7xl mx-auto">
+    <Container id="pricing" className="mb-16 2xl:mb-40 max-w-7xl mx-auto">
       <SectionTitle centered subtitle="Transparent Pricing" title="Choose the plan that fits your business needs" />
 
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 pt-8">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 lg:pt-8">
         {/* Essential Plan */}
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-md">
           <div className="p-6 border-b border-slate-100">
@@ -114,7 +114,7 @@ const Pricing = () => {
       </div>
 
       <div className="mt-20 text-center">
-        <a href="#contact" className="inline-flex items-center capitalize text-slate-900 hover:text-slate-800 font-medium">
+        <a href="#" className="inline-flex items-center capitalize text-slate-900 hover:text-slate-800 font-medium">
           Compare All Plans
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

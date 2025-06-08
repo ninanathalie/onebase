@@ -5,28 +5,27 @@ import AboutImg from "@/assets/1b-about.svg";
 
 const About = () => {
   return (
-    <Container id="about" className="mb-24 lg:mb-32">
-      
-      <div className="flex flex-col gap-24 lg:flex-row items-center">
-
-        <div className="lg:w-5/12 mb-10">
+    <Container id="about" className="mb-16">
+      <div className="flex flex-col gap-8 lg:gap-14 xl:gap-24 lg:flex-row items-center">
+        <div className="w-full lg:w-5/12 mb-10 flex justify-center lg:justify-end">
           <img src={AboutImg} alt="" />
         </div>
 
-        <div className="lg:w-7/12">
-          <SectionTitle subtitle="About 1Base" title="Simplify. Optimize. Accelerate." />
-        
+        <div className="w-full lg:w-7/12 text-center lg:text-left">
+          <SectionTitle responsive subtitle="About 1Base" title="Simplify. Optimize. Accelerate." />
+
           <p className="text-slate-600 mb-2">
-            At 1Base, we craft powerful software solutions designed specifically for your business to simplify complexity, drive productivity, and ignite growth. Starting with tailored Zoho implementations and extending to comprehensive software solutions, we ensure your digital infrastructure aligns seamlessly with your ambitions.
+            At 1Base, we craft powerful software solutions designed specifically for your business to simplify complexity, drive productivity, and ignite growth. Starting with tailored Zoho implementations and extending to comprehensive software solutions, we ensure your digital
+            infrastructure aligns seamlessly with your ambitions.
           </p>
 
           <p className="text-slate-600 mb-8">
             From streamlined processes to supercharged sales pipelines, our expert team focuses on what truly matters, your business results. We don't just provide solutions; we partner with you every step of the way, delivering clarity, efficiency, and measurable growth.
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-4 w-full  flex flex-col items-center lg:items-start">
             <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+              <CheckCircle className="hidden lg:inline h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1.5" />
               <div>
                 <h4 className="font-medium text-lg text-slate-900">Expert Implementation</h4>
                 <p className="text-slate-600">Our team of certified professionals ensures smooth CRM implementation.</p>
@@ -34,7 +33,7 @@ const About = () => {
             </div>
 
             <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+              <CheckCircle className="hidden lg:inline h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1.5" />
               <div>
                 <h4 className="font-medium text-lg text-slate-900">Tailored Solutions</h4>
                 <p className="text-slate-600">We customize your CRM to match your specific business workflows and goals.</p>
@@ -42,7 +41,7 @@ const About = () => {
             </div>
 
             <div className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+              <CheckCircle className="hidden lg:inline h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1.5" />
               <div>
                 <h4 className="font-medium text-lg text-slate-900">Ongoing Support</h4>
                 <p className="text-slate-600">We provide continuous assistance to help you maximize your CRM investment.</p>
@@ -50,7 +49,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
       </div>
     </Container>
   );

@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
-    <Container id="contact">
+    <Container id="contact" className="mb-12 lg:mb-24">
       <SectionTitle centered subtitle="Get in Touch" title="Let us know how we can help" />
 
       <div className="max-w-6xl mx-auto">
