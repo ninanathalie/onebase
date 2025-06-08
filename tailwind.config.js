@@ -21,6 +21,25 @@ export default {
         outfit: ["Outfit", "sans-serif"],
         krona: ["Krona One", "sans-serif"],
       },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        "image-glow": "image-glow 4.1s ease-out 0.6s forwards",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        "image-glow": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "0.4" },
+        },
+      },
     },
   },
   plugins: [
