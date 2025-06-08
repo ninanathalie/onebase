@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface NavLinkProps {
   href: string;
@@ -17,7 +17,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
     <a
       href={href}
       className={`font-medium transition-colors duration-300 hover:text-blue-600 ${
-        mobile ? 'text-gray-900 text-lg block w-full' : 'text-gray-700'
+        mobile ? "text-gray-900 text-lg block w-full" : "text-gray-700"
       }`}
       onClick={onClick}
     >

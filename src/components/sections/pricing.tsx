@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Container from '../ui/Container';
-import SectionTitle from '../ui/SectionTitle';
-import { CheckCircle, X } from 'lucide-react';
+import React, { useState } from "react";
+import Container from "../ui/container";
+import SectionTitle from "../ui/section-title";
+import { CheckCircle, X } from "lucide-react";
 
 interface PlanFeature {
   name: string;
@@ -35,7 +35,7 @@ const Pricing = () => {
         <div className="bg-gray-100 p-1 rounded-lg inline-flex">
           <button
             className={`px-4 py-2 rounded-md transition-colors duration-300 ${
-              !annual ? 'bg-white shadow-sm text-gray-900' : 'text-gray-600'
+              !annual ? "bg-white shadow-sm text-gray-900" : "text-gray-600"
             }`}
             onClick={() => setAnnual(false)}
           >
@@ -43,7 +43,7 @@ const Pricing = () => {
           </button>
           <button
             className={`px-4 py-2 rounded-md transition-colors duration-300 ${
-              annual ? 'bg-white shadow-sm text-gray-900' : 'text-gray-600'
+              annual ? "bg-white shadow-sm text-gray-900" : "text-gray-600"
             }`}
             onClick={() => setAnnual(true)}
           >
@@ -59,8 +59,8 @@ const Pricing = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-2">Starter</h3>
             <p className="text-gray-600 mb-4">Perfect for small businesses</p>
             <div className="flex items-baseline">
-              <span className="text-4xl font-bold text-gray-900">${annual ? '799' : '999'}</span>
-              <span className="text-gray-500 ml-2">{annual ? '/year' : '/month'}</span>
+              <span className="text-4xl font-bold text-gray-900">${annual ? "799" : "999"}</span>
+              <span className="text-gray-500 ml-2">{annual ? "/year" : "/month"}</span>
             </div>
           </div>
           <div className="p-6">
@@ -72,7 +72,7 @@ const Pricing = () => {
                   ) : (
                     <X className="h-5 w-5 text-gray-300 mr-3 flex-shrink-0 mt-0.5" />
                   )}
-                  <span className={feature.starter ? 'text-gray-700' : 'text-gray-400'}>
+                  <span className={feature.starter ? "text-gray-700" : "text-gray-400"}>
                     {feature.name}
                   </span>
                 </li>
@@ -96,8 +96,8 @@ const Pricing = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-2">Professional</h3>
             <p className="text-gray-600 mb-4">Ideal for growing companies</p>
             <div className="flex items-baseline">
-              <span className="text-4xl font-bold text-gray-900">${annual ? '1599' : '1999'}</span>
-              <span className="text-gray-500 ml-2">{annual ? '/year' : '/month'}</span>
+              <span className="text-4xl font-bold text-gray-900">${annual ? "1599" : "1999"}</span>
+              <span className="text-gray-500 ml-2">{annual ? "/year" : "/month"}</span>
             </div>
           </div>
           <div className="p-6">
@@ -109,7 +109,7 @@ const Pricing = () => {
                   ) : (
                     <X className="h-5 w-5 text-gray-300 mr-3 flex-shrink-0 mt-0.5" />
                   )}
-                  <span className={feature.professional ? 'text-gray-700' : 'text-gray-400'}>
+                  <span className={feature.professional ? "text-gray-700" : "text-gray-400"}>
                     {feature.name}
                   </span>
                 </li>
@@ -142,7 +142,7 @@ const Pricing = () => {
                   ) : (
                     <X className="h-5 w-5 text-gray-300 mr-3 flex-shrink-0 mt-0.5" />
                   )}
-                  <span className={feature.enterprise ? 'text-gray-700' : 'text-gray-400'}>
+                  <span className={feature.enterprise ? "text-gray-700" : "text-gray-400"}>
                     {feature.name}
                   </span>
                 </li>

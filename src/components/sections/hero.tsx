@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChevronRight, BarChart3 } from 'lucide-react';
+import React from "react";
+import { ChevronRight, BarChart3 } from "lucide-react";
 
 const Hero = () => {
   return (

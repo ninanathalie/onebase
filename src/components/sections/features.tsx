@@ -1,7 +1,7 @@
-import React from 'react';
-import Container from '../ui/Container';
-import SectionTitle from '../ui/SectionTitle';
-import { Users, BarChart, Zap, Shield, Clock, Headphones } from 'lucide-react';
+import React from "react";
+import Container from "../ui/container";
+import SectionTitle from "../ui/section-title";
+import { Users, BarChart, Zap, Shield, Clock, Headphones } from "lucide-react";
 
 interface FeatureProps {
   icon: React.ReactNode;

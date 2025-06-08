@@ -1,6 +1,6 @@
-import React from 'react';
-import Container from '../ui/Container';
-import SectionTitle from '../ui/SectionTitle';
+import React from "react";
+import Container from "../ui/container";
+import SectionTitle from "../ui/section-title";
 
 const Consultation = () => {
   return (
@@ -12,10 +12,10 @@ const Consultation = () => {
       
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <iframe 
-          width='100%' 
-          height='750px' 
-          src='https://zoho-1base.zohobookings.com/portal-embed#/4754457000000044006' 
-          frameBorder='0' 
+          width="100%" 
+          height="750px" 
+          src="https://zoho-1base.zohobookings.com/portal-embed#/4754457000000044006" 
+          frameBorder="0" 
           allowFullScreen
         />
       </div>

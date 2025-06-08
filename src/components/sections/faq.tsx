@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Container from '../ui/Container';
-import SectionTitle from '../ui/SectionTitle';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from "react";
+import Container from "../ui/container";
+import SectionTitle from "../ui/section-title";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface FaqItemProps {
   question: string;
@@ -26,7 +26,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
       </button>
       <div 
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 pb-4' : 'max-h-0'
+          isOpen ? "max-h-96 pb-4" : "max-h-0"
         }`}
       >
         <p className="text-gray-600">{answer}</p>
