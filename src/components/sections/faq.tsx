@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import Container from "@/components/ui/container";
 import SectionTitle from "@/components/ui/section-title";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface FaqItemProps {
   question: string;
@@ -12,24 +12,24 @@ interface FaqItemProps {
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="border-b border-gray-200 last:border-b-0">
+    <div className="border-b border-slate-200 last:border-b-0 px-6">
       <button
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={onClick}
       >
-        <span className="text-lg font-medium text-gray-900">{question}</span>
+        <span className="text-lg font-medium text-slate-900">{question}</span>
         {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-gray-500" />
+          <ChevronUp className="h-5 w-5 text-slate-500" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-gray-500" />
+          <ChevronDown className="h-5 w-5 text-slate-500" />
         )}
       </button>
       <div 
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-96 pb-4" : "max-h-0"
+          isOpen ? 'max-h-96 pb-4' : 'max-h-0'
         }`}
       >
-        <p className="text-gray-600">{answer}</p>
+        <p className="text-slate-600">{answer}</p>
       </div>
     </div>
   );
@@ -72,11 +72,12 @@ const Faq = () => {
   return (
     <Container id="faq">
       <SectionTitle 
-        title="Frequently Asked Questions" 
-        subtitle="Find answers to common questions about our CRM setup services"
+        centered
+        subtitle="Frequently Asked Questions"
+        title="Get the Insights You Need to Use Our Tools with Confidence" 
       />
       
-      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
+      <div className="max-w-3xl mx-auto bg-white/80 rounded-xl shadow-sm overflow-hidden">
         {faqs.map((faq, index) => (
           <FaqItem 
             key={index}
@@ -89,10 +90,10 @@ const Faq = () => {
       </div>
       
       <div className="mt-10 text-center">
-        <p className="text-gray-600 mb-4">Still have questions?</p>
+        <p className="text-slate-600 mb-2 capitalize">Still have questions?</p>
         <a 
           href="#contact" 
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          className="inline-flex items-center capitalize text-slate-900 hover:text-slate-800 font-medium"
         >
           Contact our support team
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
