@@ -1,15 +1,12 @@
+import { Route, Routes } from "react-router-dom";
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import Hero from "@/components/sections/hero";
-import Features from "@/components/sections/features";
-import About from "@/components/sections/about";
-import Pricing from "@/components/sections/pricing";
-import Consultation from "@/components/sections/consultation";
-import Faq from "@/components/sections/faq";
-import Contact from "@/components/sections/contact";
-import ScrollingTextDivider from "@/components/sections/text-divider";
+import HomePage from "@/pages/home";
+import PricingPage from "@/pages/pricing";
 
 import ThemeContextProvider from "@/context/theme-context";
+
 
 function App() {
   return (
@@ -19,14 +16,10 @@ function App() {
 
           <Header />
           <main className="flex-grow relative">
-            <Hero />
-            <Features />
-            <ScrollingTextDivider />
-            <About />
-            <Pricing />
-            <Consultation />
-            <Faq />
-            <Contact />
+            <Routes>
+              <Route path="/" element={<HomePage />}  />
+              <Route path="/pricing" element={<PricingPage />}  />
+            </Routes>
           </main>
           <Footer />
           
