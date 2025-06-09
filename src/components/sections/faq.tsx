@@ -12,12 +12,12 @@ interface FaqItemProps {
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="border-b border-slate-200 last:border-b-0 px-6">
+    <div className="border-b border-slate-200 dark:border-slate-700 last:border-b-0 px-6">
       <button
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={onClick}
       >
-        <span className="text-lg font-medium text-slate-900">{question}</span>
+        <span className="text-lg font-medium text-slate-900 dark:text-slate-300">{question}</span>
         {isOpen ? (
           <ChevronUp className="h-5 w-5 text-slate-500" />
         ) : (
@@ -29,7 +29,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
           isOpen ? 'max-h-96 pb-4' : 'max-h-0'
         }`}
       >
-        <p className="text-slate-600">{answer}</p>
+        <p className="text-slate-600 dark:text-slate-400">{answer}</p>
       </div>
     </div>
   );
@@ -73,15 +73,15 @@ const Faq = () => {
     <Container id="faq">
       <SectionTitle centered subtitle="Frequently Asked Questions" title="Get the Insights You Need to Use Our Tools with Confidence" />
 
-      <div className="max-w-3xl mx-auto bg-white/80 rounded-xl shadow-sm overflow-hidden">
+      <div className="max-w-3xl mx-auto bg-white/80 dark:bg-white/5 rounded-xl shadow-sm overflow-hidden">
         {faqs.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} isOpen={openIndex === index} onClick={() => handleToggle(index)} />
         ))}
       </div>
 
       <div className="mt-10 pb-16 lg:pb-24 text-center border-b border-dashed border-primary-300">
-        <p className="text-slate-600 mb-2 capitalize">Still have questions?</p>
-        <a href="#contact" className="inline-flex items-center capitalize text-slate-900 hover:text-slate-800 font-medium">
+        <p className="text-slate-600 dark:text-slate-400 mb-2 capitalize">Still have questions?</p>
+        <a href="#contact" className="inline-flex items-center capitalize text-slate-900 hover:text-slate-800 dark:text-slate-200 dark:hover:text-slate-100 font-medium">
           Contact our support team
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

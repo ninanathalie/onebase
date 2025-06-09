@@ -12,12 +12,24 @@ import HeroGraphFour from "@/assets/1b-hero-graph-4.svg";
 import HeroGraphFive from "@/assets/1b-hero-graph-5.svg";
 import HeroGraphSix from "@/assets/1b-hero-graph-6.svg";
 
-const Hero = () => {
-  const [color, setColor] = useState("#FF8000");
 
+interface HeroBeamProps {
+  size?: number;
+  duration?: number;
+  delay?: number;
+  colorFrom?: string;
+  colorTo?: string;
+  transition?: Transition;
+  className?: string;
+  style?: React.CSSProperties;
+  reverse?: boolean;
+  initialOffset?: number;
+}
+
+const Hero = () => {
   return (
-    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
-      <Particles className="absolute inset-0 z-10" quantity={100} ease={80} color={color} refresh />
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+      <Particles className="absolute inset-0 z-10" quantity={100} ease={80} color="#FF8000" refresh />
 
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="px-4 py-10 lg:py-20 z-20">
@@ -32,7 +44,7 @@ const Hero = () => {
                   delay: index * 0.1,
                   ease: "easeInOut",
                 }}
-                className="mr-2 inline-block bg-gradient-to-t from-sky-900 via-slate-900 to-slate-950 bg-clip-text text-transparent"
+                className="mr-2 inline-block bg-gradient-to-t from-sky-900 via-slate-900 to-slate-950 bg-clip-text text-transparent dark:from-primary-100 dark:to-slate-100"
               >
                 {word}
               </motion.span>
@@ -49,7 +61,7 @@ const Hero = () => {
               duration: 0.3,
               delay: 0.8,
             }}
-            className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg text-slate-500"
+            className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg text-slate-500 dark:text-slate-400"
           >
             Professional CRM setup services to help you manage relationships, increase productivity, and drive growth.
           </motion.p>
@@ -92,7 +104,7 @@ const Hero = () => {
             before:blur-[180px]
             before:animate-image-glow"
           >
-            <div className="relative mt-14 lg:mt-20 rounded-2xl lg:rounded-3xl bg-slate-900 p-2 lg:p-4 shadow-md">
+            <div className="relative mt-14 lg:mt-20 rounded-2xl lg:rounded-3xl bg-slate-900 dark:bg-slate-800 p-2 lg:p-4 shadow-md">
               <HeroImg />
               <HeroBeam duration={4} size={800} />
             </div>
@@ -131,7 +143,7 @@ const HeroImg = () => {
   };
 
   return (
-    <motion.div initial="initial" whileHover="animate" className="flex flex-1 justify-center w-full h-full rounded-md lg:rounded-xl bg-gradient-to-br from-indigo-100 to-cyan-50 dark:from-indigo-100/10 dark:to-cyan-50/5 overflow-hidden">
+    <motion.div initial="initial" whileHover="animate" className="flex flex-1 justify-center w-full h-full rounded-md lg:rounded-xl bg-gradient-to-br from-indigo-100 to-cyan-50 dark:from-indigo-400/20 dark:to-cyan-950/80 overflow-hidden">
       <div className="flex flex-col">
         <div className="flex flex-row">
           <motion.div variants={motionOne} className="lg:mt-4 lg:mx-3 md:mt-2 md:mx-2 mt-1 mx-1">
@@ -232,19 +244,6 @@ const HeroImg = () => {
     </motion.div>
   );
 };
-
-interface HeroBeamProps {
-  size?: number;
-  duration?: number;
-  delay?: number;
-  colorFrom?: string;
-  colorTo?: string;
-  transition?: Transition;
-  className?: string;
-  style?: React.CSSProperties;
-  reverse?: boolean;
-  initialOffset?: number;
-}
 
 const HeroBeam = ({ className, size = 50, delay = 0, duration = 6, colorFrom = "#ffaa40", colorTo = "#9c40ff", transition, style, reverse = false, initialOffset = 0 }: HeroBeamProps) => {
   return (

@@ -9,26 +9,30 @@ import Faq from "@/components/sections/faq";
 import Contact from "@/components/sections/contact";
 import ScrollingTextDivider from "@/components/sections/text-divider";
 
+import ThemeContextProvider from "@/context/theme-context";
+
 function App() {
   return (
-    <div className="bg-gradient-to-bl from-indigo-200 via-teal-100/10 to-indigo-200">
-      <div className="flex flex-col min-h-screen bg-grid-small-slate-400/[0.2] relative">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+    <ThemeContextProvider>
+      <div className="bg-gradient-to-bl from-indigo-200 via-teal-100/10 to-indigo-200 dark:from-cyan-950 dark:via-slate-950 dark:to-blue-950">
+        <div className="flex flex-col min-h-screen bg-grid-small-slate-400/[0.2] dark:bg-grid-small-slate-950 relative">
 
-        <Header />
-        <main className="flex-grow relative">
-          <Hero />
-          <Features />
-          <ScrollingTextDivider />
-          <About />
-          <Pricing />
-          <Consultation />
-          <Faq />
-          <Contact />
-        </main>
-        <Footer />
+          <Header />
+          <main className="flex-grow relative">
+            <Hero />
+            <Features />
+            <ScrollingTextDivider />
+            <About />
+            <Pricing />
+            <Consultation />
+            <Faq />
+            <Contact />
+          </main>
+          <Footer />
+          
+        </div>
       </div>
-    </div>
+    </ThemeContextProvider>
   );
 }
 

@@ -10,6 +10,6 @@
   }
   
   body {
-    @apply text-slate-800 font-outfit font-light tracking-wide;
+    @apply text-slate-800 dark:text-slate-400 font-outfit font-light tracking-wide;
   }
 }

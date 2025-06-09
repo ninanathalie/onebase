@@ -4,6 +4,7 @@ const svgToDataUri = require("mini-svg-data-uri");
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 export default {
+  darkMode: "class",
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {

@@ -14,7 +14,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
   onClick
 }) => {
   return (
-    <a href={href} className={`font-medium transition-colors duration-300 hover:text-primary-500 ${mobile ? "text-slate-900 text-md block w-full" : "text-slate-700"}`} onClick={onClick}>
+    <a href={href} className={`font-medium transition-colors duration-300 hover:text-primary-500 ${mobile ? "text-slate-900 dark:text-slate-50 text-md block w-full" : "text-slate-700 dark:text-slate-50"}`} onClick={onClick}>
       {children}
     </a>
   );

@@ -3,7 +3,7 @@ import Logo from "@/assets/1b-logo-light.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300 z-40">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-slate-300 z-40">
       <div className="container mx-auto px-6 pt-12 lg:pt-24 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
