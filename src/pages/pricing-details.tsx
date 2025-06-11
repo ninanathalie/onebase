@@ -1,5 +1,5 @@
 import { BadgeCheck, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 
 import Container from "@/components/ui/container";
 import SectionTitle from "@/components/ui/section-title";

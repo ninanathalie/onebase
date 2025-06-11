@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import { motion, MotionStyle, Transition } from "motion/react";
 
 import Button from "@/components/ui/button";
@@ -11,7 +10,6 @@ import HeroGraphThree from "@/assets/1b-hero-graph-3.svg";
 import HeroGraphFour from "@/assets/1b-hero-graph-4.svg";
 import HeroGraphFive from "@/assets/1b-hero-graph-5.svg";
 import HeroGraphSix from "@/assets/1b-hero-graph-6.svg";
-
 
 interface HeroBeamProps {
   size?: number;
@@ -29,27 +27,43 @@ interface HeroBeamProps {
 const Hero = () => {
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-      <Particles className="absolute inset-0 z-10" quantity={100} ease={80} color="#FF8000" refresh />
+      <Particles
+        className="absolute inset-0 z-10"
+        quantity={100}
+        ease={80}
+        color="#FF8000"
+        refresh
+      />
 
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="px-4 py-10 lg:py-20 z-20">
-          <h1 className="relative z-10 mx-auto max-w-2xl lg:max-w-6xl text-center font-semibold text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
-            {"Streamline Your Business with 1Base CRM".split(" ").map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.1,
-                  ease: "easeInOut",
-                }}
-                className="mr-2 inline-block bg-gradient-to-t from-sky-900 via-slate-900 to-slate-950 bg-clip-text text-transparent dark:from-primary-100 dark:to-slate-100"
-              >
-                {word}
-              </motion.span>
-            ))}
+          <h1 className="relative z-10 mx-auto max-w-2xl lg:max-w-4xl text-center font-semibold text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
+            {"Streamline Your Business with 1Base"
+              .split(" ")
+              .map((word, index) => {
+                const isHighlight = word === "1Base";
+                return (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: index * 0.1,
+                      ease: "easeInOut",
+                    }}
+                    className={`mr-2 inline-block ${
+                      isHighlight
+                        ? "bg-gradient-to-t from-slate-950 to-primary-400 bg-clip-text text-transparent dark:from-primary-100 dark:to-primary-400"
+                        : "bg-gradient-to-t from-sky-900 via-slate-900 to-slate-950 bg-clip-text text-transparent dark:from-primary-100 dark:to-slate-100"
+                    }`}
+                  >
+                    {word}
+                  </motion.span>
+                );
+              })}
           </h1>
+
           <motion.p
             initial={{
               opacity: 0,
@@ -63,8 +77,10 @@ const Hero = () => {
             }}
             className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg text-slate-500 dark:text-slate-400"
           >
-            Professional CRM setup services to help you manage relationships, increase productivity, and drive growth.
+            Professional CRM setup services to help you manage relationships,
+            increase productivity, and drive growth.
           </motion.p>
+
           <motion.div
             initial={{
               opacity: 0,
@@ -143,10 +159,17 @@ const HeroImg = () => {
   };
 
   return (
-    <motion.div initial="initial" whileHover="animate" className="flex flex-1 justify-center w-full h-full rounded-md lg:rounded-xl bg-gradient-to-br from-indigo-100 to-cyan-50 dark:from-indigo-400/20 dark:to-cyan-950/80 overflow-hidden">
+    <motion.div
+      initial="initial"
+      whileHover="animate"
+      className="flex flex-1 justify-center w-full h-full rounded-md lg:rounded-xl bg-gradient-to-br from-indigo-100 to-cyan-50 dark:from-indigo-400/20 dark:to-cyan-950/80 overflow-hidden"
+    >
       <div className="flex flex-col">
         <div className="flex flex-row">
-          <motion.div variants={motionOne} className="lg:mt-4 lg:mx-3 md:mt-2 md:mx-2 mt-1 mx-1">
+          <motion.div
+            variants={motionOne}
+            className="lg:mt-4 lg:mx-3 md:mt-2 md:mx-2 mt-1 mx-1"
+          >
             <img
               src={HeroGraphOne}
               alt="avatar"
@@ -161,7 +184,10 @@ const HeroImg = () => {
             />
           </motion.div>
 
-          <motion.div variants={motionTwo} className="lg:mt-4 lg:mr-3 md:mt-2 md:mr-2 mt-1 mr-1">
+          <motion.div
+            variants={motionTwo}
+            className="lg:mt-4 lg:mr-3 md:mt-2 md:mr-2 mt-1 mr-1"
+          >
             <img
               src={HeroGraphTwo}
               alt="avatar"
@@ -179,7 +205,10 @@ const HeroImg = () => {
 
         <div className="flex flex-row">
           <div className="flex flex-col">
-            <motion.div variants={motionTwo} className="lg:mt-4 lg:mx-3 md:mt-2 md:mx-2 mt-1 mx-1">
+            <motion.div
+              variants={motionTwo}
+              className="lg:mt-4 lg:mx-3 md:mt-2 md:mx-2 mt-1 mx-1"
+            >
               <img
                 src={HeroGraphThree}
                 alt="avatar"
@@ -194,7 +223,10 @@ const HeroImg = () => {
               />
             </motion.div>
 
-            <motion.div variants={motionOne} className="lg:mt-5 lg:mx-3 md:mt-3 md:mx-2 mt-1 mx-1">
+            <motion.div
+              variants={motionOne}
+              className="lg:mt-5 lg:mx-3 md:mt-3 md:mx-2 mt-1 mx-1"
+            >
               <img
                 src={HeroGraphFour}
                 alt="avatar"
@@ -210,7 +242,10 @@ const HeroImg = () => {
             </motion.div>
           </div>
 
-          <motion.div variants={motionOne} className="lg:mt-4 md:mt-2 mt-1 lg:mr-3 md:mr-2 mr-1">
+          <motion.div
+            variants={motionOne}
+            className="lg:mt-4 md:mt-2 mt-1 lg:mr-3 md:mr-2 mr-1"
+          >
             <img
               src={HeroGraphFive}
               alt="avatar"
@@ -245,11 +280,26 @@ const HeroImg = () => {
   );
 };
 
-const HeroBeam = ({ className, size = 50, delay = 0, duration = 6, colorFrom = "#ffaa40", colorTo = "#9c40ff", transition, style, reverse = false, initialOffset = 0 }: HeroBeamProps) => {
+const HeroBeam = ({
+  className,
+  size = 50,
+  delay = 0,
+  duration = 6,
+  colorFrom = "#ffaa40",
+  colorTo = "#9c40ff",
+  transition,
+  style,
+  reverse = false,
+  initialOffset = 0,
+}: HeroBeamProps) => {
   return (
     <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]">
       <motion.div
-        className={cn("absolute aspect-square", "bg-gradient-to-l from-[var(--color-from)] via-[var(--color-to)] to-transparent", className)}
+        className={cn(
+          "absolute aspect-square",
+          "bg-gradient-to-l from-[var(--color-from)] via-[var(--color-to)] to-transparent",
+          className
+        )}
         style={
           {
             width: size,
@@ -261,7 +311,9 @@ const HeroBeam = ({ className, size = 50, delay = 0, duration = 6, colorFrom = "
         }
         initial={{ offsetDistance: `${initialOffset}%` }}
         animate={{
-          offsetDistance: reverse ? [`${100 - initialOffset}%`, `${-initialOffset}%`] : [`${initialOffset}%`, `${100 + initialOffset}%`],
+          offsetDistance: reverse
+            ? [`${100 - initialOffset}%`, `${-initialOffset}%`]
+            : [`${initialOffset}%`, `${100 + initialOffset}%`],
         }}
         transition={{
           repeat: Infinity,

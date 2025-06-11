@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 
 type ButtonProps = {
   variant?: "default" | "outline" | "primary";
@@ -27,11 +27,14 @@ const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     default: "bg-slate-900 text-white hover:bg-slate-800",
-    outline: "border-2 border-slate-900 bg-transparent text-black dark:text-white dark:border-slate-50",
+    outline:
+      "border-2 border-slate-900 bg-transparent text-black dark:text-white dark:border-slate-50",
     primary: "bg-primary-500 text-white hover:bg-primary-400",
   };
 
-  const allClasses = cn(`${baseClasses} ${variantClasses[variant]} ${className || ""}`);
+  const allClasses = cn(
+    `${baseClasses} ${variantClasses[variant]} ${className || ""}`
+  );
 
   // If href is provided, render as <a>
   if (href) {
