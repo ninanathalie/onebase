@@ -8,8 +8,8 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({ children, id, className = '' }) => {
   return (
-    <section id={id} className={`py-16 md:py-24 ${className}`}>
-      <div className="container mx-auto px-4 md:px-6">
+    <section id={id} className={`py-16 lg:py-20 2xl:py-24 px-8 ${className}`}>
+      <div className="container mx-auto">
         {children}
       </div>
     </section>
